@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+    <style>
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="1000px" height="500px">
+        失败了啥也看不到
+    </canvas>
+    <script>
+        var myCanvas = document.querySelector("canvas");
+        var stx =myCanvas.getContext("2d");
+        stx.strokeStyle = "black";
+        stx.lineWidth = 1
+        stx.moveTo(250,100)
+        stx.lineTo(120,400)
+        stx.lineTo(430,200)
+        stx.lineTo(70,200)
+        stx.lineTo(380,400)
+        stx.lineTo(250,100)
+        stx.closePath();
+        stx.stroke();
+        
+        var atx =myCanvas.getContext("2d");
+        atx.strokeStyle = "black";
+        atx.lineWidth = 1
+        atx.beginPath();
+        atx.moveTo(750,100)
+        atx.lineTo(620,400)
+        atx.lineTo(930,200)
+        atx.lineTo(570,200)
+        atx.lineTo(880,400)
+        atx.lineTo(750,100)
+        atx.fillStyle = "red"
+        atx.fill();
+        atx.stroke()
+
+    </script>
+</body>
+</html>
